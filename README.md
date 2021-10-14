@@ -62,7 +62,7 @@ intensity의 히스토그램 분석을 통해 상위 99% 이상은 99%의 값으
 <p align="center"><img src = "./GM_img/dice.png" width="30%" height="30%"></center></>
 <p align="center">* [식 1] 다이스 계수 공식 *</center></>  
 
-두번째로 사용한 함수는 Intersection over union(IOU, 식 (2))를 사용하여, 다이스 계수와 IOU 측정 대한 비교를 진행함.  
+두번째로 사용한 함수는 Intersection over union(IOU, 식 (2))를 사용하여, 다이스 계수와 IOU 측정치에 대한 비교를 진행함.  
 
 <p align="center"><img src = "./GM_img/iou.png" width="40%" height="40%"></center></>
 <p align="center">* [식 2] IOU 공식 *</center></> 
