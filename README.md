@@ -84,7 +84,7 @@ intensity의 히스토그램 분석을 통해 상위 99% 이상은 99%의 값으
 
 표 1은 ADNI 테스트 데이터 5명에 대한 정량적 비교 결과를 보여줌.  
 <p align="center"><img src = "./GM_img/table.png" width="80%" height="80%"></center></>
-<p align="center">* [표 1] ADNI 테스트 데이터 5명에 대하 정량적 비교 *</center></>
+<p align="center">* [표 1] ADNI 테스트 데이터 5명에 대한 정량적 비교 *</center></>
 
 본 연구에서는 영상 분할 과정을 딥러닝 알고리즘(3D-ResUnet)으로 학습하는 연구를 진행함.  
 시각적 비교 결과, 정답 영상과 예측 영상이 거의 유사 했으나 수치적으로 점수를 비교하면 기존 과정의 정확도보다 낮게 나옴.  
