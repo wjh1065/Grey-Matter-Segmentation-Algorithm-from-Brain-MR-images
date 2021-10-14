@@ -72,7 +72,7 @@ intensity의 히스토그램 분석을 통해 상위 99% 이상은 99%의 값으
 모든 구현은 유닉스 상(Ubuntu 18.04.5 LTS)의 Python 버전 3.8.8에서 구글 텐서플로우 (TensorFlowTM) 버전 2.5.0, 케라스(Keras) 버전 2.5.0으로 구현되었다. 학습에 사용된 하드웨어 정보는 다음과 같다 (CPU: Intel i7-6700@3.4GHz, GPU: Nvidia RTX 3090 24GB, memory: 48GB).
 
 ## 5.  실험결과 및 고찰
-그림 5는 최종 모델의 학습 곡선을 보여줌.  과적합을 막기 위해 검증 데이터에서의 손실이 더 이상 증가하지 않는 정도에서 학습을 멈춤.  
+그림 5는 최종 모델의 학습 곡선을 보여줌.  과적합을 막기 위해 검증 데이터에서의 다이스 손실이 더 이상 증가하지 않는 정도에서 학습을 멈춤.  
 <p align="center"><img src = "./GM_img/loss.png" width="50%" height="50%"></center></>
 <p align="center">* [그림 5] ADNI 데이터에 대해 3D-ResUnet의 학습 및 검증 다이스 손실 그래프 *</center></> 
 
