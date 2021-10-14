@@ -96,7 +96,7 @@ intensity의 히스토그램 분석을 통해 상위 99% 이상은 99%의 값으
 
 ### 자세한 내용은 아래 파일 확인.
 
-[자료](https://drive.google.com/file/d/1i-FrVqro_EcoaMggkxfeSW9pPQNBAhfD/view?usp=sharing)
+[자료](https://drive.google.com/file/d/1i-FrVqro_EcoaMggkxfeSW9pPQNBAhfD/view?usp=sharing)  
 [발표](https://youtu.be/STwbK5M6tT0)
 
 
