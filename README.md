@@ -15,11 +15,11 @@
 ## 1. 데이터 셋 소개
 본 연구에서 사용한 데이터는 알츠하이머 병 뇌 영상 데이터베이스(ADNI)로 부터 획득함.  
 
-ADNI 데이터셋에서 694명의 3D-PET영상을 사용하였으며 이 중 550명의 환자 영상을 훈련 데이터로, 50명 환자 영상을 검증 데이터로, 나머지 94명을 테스트 데이터로 설정하고 학습 및 실험을 진행함.
+ADNI 데이터셋에서 65명의 자기공명영상을 사용하였으며 이 중 50명의 환자 영상을 훈련 데이터로, 10명 환자 영상을 검증 데이터로, 나머지 5명을 테스트 데이터로 설정하고 학습 및 실험을 진행함.
 
-(550, 256, 256, 256, 1) # __Train data shape__  
-(50, 256, 256, 256, 1) # __Validation data shape__  
-(94, 256, 256, 256, 1) # __Test data shape__  
+(50, 256, 256, 256, 1) # __Train data shape__  
+(10, 256, 256, 256, 1) # __Validation data shape__  
+(5, 256, 256, 256, 1) # __Test data shape__  
 
 ## 2. 데이터 전처리
 딥러닝 모델에 넣어주기 위해 모든 영상의 크기를 일정하게 통일함.  
@@ -27,13 +27,13 @@ ADNI 데이터셋에서 694명의 3D-PET영상을 사용하였으며 이 중 550
 SPM 패키지를 이용하여 영상 데이터의 크기를 __표준뇌 참조 영상__ 과 같아지도록 **Reslice**하여 준비함.  
 (표준뇌 영상 크기: 복셀 사이즈 1 x 1 x 1 mm3, 크기 256 x 256 x 256).
 
-PET영상은 주입한 방사성 물질의 양, 주입한 시간 등에 따라서 영상의 강도가 매우 달라지는 특성이 있음.
-그러하여, PET 영상의 복셀 값 분포를 0에서 1사이의 값 (MinMaxScaler)으로 매핑하고, 강도 값(intensity)의 히스토그램을 분석하여 상위 99% 이상은 99%의 값으로 처리하는 intensity cropping을 시행함[그림 1].  
+Reslice 과정을 거친 영상은 대부분의 intensity들이 0 근처에 모여있지만, 일부 intensity가 매우 큰 복셀이 나타남.  
+intensity의 히스토그램 분석을 통해 상위 99% 이상은 99%의 값으로 처리하는 intensity cropping을 시행하여 범위를 제한함[그림 1]. 
 
-<p align="center"><img src = "./PVC_img/intensity_cropping.png" width="70%" height="70%"></center></>
+<p align="center"><img src = "./GM_img/intensity.png" width="70%" height="70%"></center></>
 <p align="center">* [그림 1] 특정 이미지의 (a) 원래 이미지의 복셀 값 범위, (b) intensity cropping을 실시하여 보정한 이미지의 복셀 값 범위 *</center></>
 
-<p align="center"><img src = "./PVC_img/data_preprocess.png" width="100%" height="100%"></center></>
+<p align="center"><img src = "./GM_img/data_preprocess.png" width="100%" height="100%"></center></>
 <p align="center">* [그림 2] 데이터 전처리 전체 흐름도 *</center></>  
 
 ## 3. 딥러닝 모델, 3D-ResUnet
